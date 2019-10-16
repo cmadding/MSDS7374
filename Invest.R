@@ -37,7 +37,10 @@ add.constraint(lprec, c(1, 1, 1), "=", 12000) #sum of 12,000
 add.constraint(lprec, c(1, 0, 0), ">=", 0) #muni >= 0
 add.constraint(lprec, c(0, 1, 0), ">=", 0) #cd >= 0
 add.constraint(lprec, c(0, 0, 1), ">=", 0) #high risk >= 0
+#The original constraint on High Risk
 add.constraint(lprec, c(0, 0, 1), "<=", 2000)# high risk <= 2000
+#For the second part of the question
+#add.constraint(lprec, c(0, 0, 1), "<=", 4000)# high risk 1/3 of total
 add.constraint(lprec, c(1, -3, 0), ">=", 0)#3 times as muni
 
 lprec # Display the final lpsolve matrix
